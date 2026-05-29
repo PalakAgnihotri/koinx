@@ -1,0 +1,201 @@
+/* ── Section ── */
+.ht-section {
+  margin-top: 28px;
+}
+
+.ht-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e8eaf0;
+  margin: 0 0 12px;
+}
+
+/* ── Scroll wrapper ── */
+.ht-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #1a1f35;
+}
+
+/* ── Table ── */
+.ht-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+/* ── Head ── */
+.ht-table thead tr {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ht-th {
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  vertical-align: bottom;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.ht-th--check { width: 44px; text-align: center; padding: 12px 8px; }
+.ht-th--num   { text-align: right; }
+
+.ht-subhead {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.65;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 1px;
+}
+
+/* ── Body rows ── */
+.ht-row {
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.ht-row:not(:last-child) td {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.ht-row:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.ht-row--selected {
+  background: rgba(21, 88, 192, 0.22) !important;
+}
+
+.ht-row--selected:hover {
+  background: rgba(21, 88, 192, 0.3) !important;
+}
+
+/* ── Cells ── */
+.ht-td {
+  padding: 11px 14px;
+  vertical-align: middle;
+}
+
+.ht-td--check {
+  text-align: center;
+  padding: 11px 8px;
+}
+
+.ht-td--num {
+  text-align: right;
+}
+
+/* ── Asset cell ── */
+.ht-asset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ht-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255,255,255,0.05);
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.ht-asset-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ht-ticker {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8eaf0;
+  white-space: nowrap;
+}
+
+.ht-name {
+  font-size: 11px;
+  color: rgba(255,255,255,0.38);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Value text ── */
+.ht-primary {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e0e2ee;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ht-secondary {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,0.33);
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ht-gain--pos { color: #4ade80 !important; }
+.ht-gain--neg { color: #f87171 !important; }
+
+.ht-amount { color: #93c5fd !important; }
+
+.ht-dash {
+  color: rgba(255,255,255,0.22);
+  font-size: 14px;
+}
+
+/* ── Checkbox ── */
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ── View all button ── */
+.ht-view-all {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 16px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.ht-view-all:hover {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .ht-name { max-width: 90px; }
+  .ht-title { font-size: 16px; }
+}

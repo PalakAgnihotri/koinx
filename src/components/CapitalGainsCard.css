@@ -1,0 +1,130 @@
+.cgcard {
+  border-radius: 16px;
+  padding: 22px 24px;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cgcard--pre {
+  background: #1a1f35;
+  color: #e8eaf0;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.cgcard--post {
+  background: #1558c0;
+  color: #ddeeff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Title */
+.cgcard__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 18px;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+
+/* Table */
+.cgcard__table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cgcard__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.cgcard__row--header {
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 4px;
+}
+
+.cgcard__cell {
+  font-size: 13px;
+}
+
+.cgcard__cell--label {
+  color: inherit;
+  opacity: 0.65;
+  font-size: 13px;
+}
+
+.cgcard__cell--col {
+  text-align: right;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cgcard__cell--val {
+  text-align: right;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+
+.val--neg { color: #ff6b72; }
+.val--pos { color: inherit; }
+
+.cgcard--post .val--neg { color: #ffaaaa; }
+
+/* Footer */
+.cgcard__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cgcard__realised-label {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.cgcard__realised-val {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Savings badge */
+.cgcard__savings {
+  margin-top: 12px;
+  background: rgba(52,211,153,0.15);
+  border: 1px solid rgba(52,211,153,0.35);
+  color: #6ee7b7;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cgcard { padding: 16px; }
+  .cgcard__realised-val { font-size: 18px; }
+  .cgcard__row { grid-template-columns: 1fr 1fr 1fr; }
+  .cgcard__cell--label { font-size: 11px; }
+  .cgcard__cell--val { font-size: 11px; }
+}
